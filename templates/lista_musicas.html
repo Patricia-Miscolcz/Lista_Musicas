@@ -1,0 +1,27 @@
+{% extends "padrao.html"%}
+
+{% block conteudo %}
+
+<table class="table table-hover">
+    <thead class="table-dark">
+
+        <tr>
+            <th>Musica</th>
+            <th>Cantor/Grupo/Banda</th>
+            <th>Genero</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+        {% for music in musicas %}
+        <tr>
+            <td>{{music.nome_musica}}</td>
+            <td>{{music.cantor_banda}}</td>
+            <td>{{music.genero_musica}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>            
+</table>
+
+{% endblock%}
